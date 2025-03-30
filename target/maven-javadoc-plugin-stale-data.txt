@@ -1,0 +1,42 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/jehow/OneDrive/Documents/NetBeansProjects/SubtitleAppGUI-main/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/jehow/OneDrive/Documents/NetBeansProjects/SubtitleAppGUI-main/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'subtitleapp 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'subtitleapp 1.0-SNAPSHOT API'
+code.subtitle.app
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\src\main\java = 1743093545508
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\allclasses-index.html = 1743294042531
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\allpackages-index.html = 1743294042535
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\element-list = 1743294042335
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\help-doc.html = 1743294042571
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\index-all.html = 1743294042560
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\index.html = 1743294042567
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\member-search-index.js = 1743294042542
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\module-search-index.js = 1743294042537
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\overview-tree.html = 1743294042502
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\package-search-index.js = 1743294042539
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\search.html = 1743294042564
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\serialized-form.html = 1743294042409
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\tag-search-index.js = 1743294042544
+C:\Users\jehow\OneDrive\Documents\NetBeansProjects\SubtitleAppGUI-main\target\reports\apidocs\type-search-index.js = 1743294042541
