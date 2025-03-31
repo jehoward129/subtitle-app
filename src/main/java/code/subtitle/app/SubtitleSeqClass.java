@@ -5,6 +5,7 @@
 package code.subtitle.app;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -16,6 +17,9 @@ public class SubtitleSeqClass implements SubtitleSeq{
 
     public SubtitleSeqClass(List<Subtitle> subtitles) {
         this.subSeq = subtitles;
+    }
+    public SubtitleSeqClass(){
+        
     }
     @Override
     public void addSubtitle(Subtitle st) { 
@@ -82,10 +86,12 @@ public class SubtitleSeqClass implements SubtitleSeq{
 
     @Override
     public void remove(String str) {
-        for(Subtitle s: subSeq){
+        Iterator<Subtitle> iterator = subSeq.iterator();
+        while (iterator.hasNext()) {
+            Subtitle s = iterator.next();
             String text = s.getText();
-            if(text.toUpperCase().contains(str.toUpperCase())){
-                subSeq.remove(s);
+            if (text.toUpperCase().contains(str.toUpperCase())) {
+                iterator.remove();
             }
         }
     }
@@ -103,48 +109,48 @@ public class SubtitleSeqClass implements SubtitleSeq{
 
     @Override
     public void shift(int offset) {
-        for(Subtitle sub: subSeq){
-            SubtitleClass s = ((SubtitleClass)sub);
-            
-            TimeClass t = ((TimeClass)s.getStartTime());
-            t.shift(offset);
-            
-            Time m = ((Time)t);
-            sub.setStartTime(m);
-            
-            TimeClass t1 = ((TimeClass)s.getEndTime());
-            t1.shift(offset);
-            
-            Time m1 = ((Time)t1);
-            sub.setEndTime(m1);
-            
-             
+        for (Subtitle sub : subSeq) {
+            SubtitleClass s = ((SubtitleClass) sub);
+
+            // Shift start time and update
+            TimeClass t = (TimeClass) s.getStartTime();
+            TimeClass newStart = t.shift(offset); // Get the shifted time
+            sub.setStartTime(newStart); // Update the start time
+
+            // Shift end time and update
+            TimeClass t1 = (TimeClass) s.getEndTime();
+            TimeClass newEnd = t1.shift(offset); // Get the shifted time
+            sub.setEndTime(newEnd); // Update the end time
         }
     }
-
     @Override
     public void cut(Time startTime, Time endTime) {
-        TimeClass et = ((TimeClass)endTime);
-        TimeClass st = ((TimeClass)startTime);
-        Time tempSTm;
-        Time tempETm;
-        for(Subtitle s: subSeq){
-            tempSTm = s.getStartTime();
-            TimeClass start = ((TimeClass)tempSTm);
-            tempETm = s.getEndTime();
-            TimeClass end = ((TimeClass)tempETm);
-            
-            
-            if(start.isBefore(et) && start.isAfter(st)){
-                subSeq.remove(s);
-            }
-            if(end.isBefore(et) && end.isAfter(st)){
-                subSeq.remove(s);
+        TimeClass et = ((TimeClass) endTime);
+        TimeClass st = ((TimeClass) startTime);
+        Iterator<Subtitle> iterator = subSeq.iterator();
+
+        while (iterator.hasNext()) {
+            Subtitle s = iterator.next();
+            TimeClass start = (TimeClass) s.getStartTime();
+            TimeClass end = (TimeClass) s.getEndTime();
+
+            if ((start.isBefore(et) && start.isAfter(st)) || (end.isBefore(et) && end.isAfter(st))) {
+                iterator.remove();
             }
         }
-       
     }
-
+    public void showText(){
+        for(Subtitle s: subSeq){
+            System.out.println(s.getText());
+        }
+    }
+    public void showTimes(){
+        for(Subtitle s: subSeq){
+            Time st = s.getStartTime();
+            Time et = s.getEndTime();
+            System.out.println(st.getHH() + ":" + st.getMM() + ":" + st.getSS() + "," + st.getMS());
+        }
+    }
     
 
     

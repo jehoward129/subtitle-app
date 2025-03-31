@@ -28,13 +28,13 @@ public class Utils {
 
         //back to making time vars
         int startSeconds = Integer.parseInt(secsAndMilsList[0]);
-        System.out.println(startSeconds);
+//        System.out.println(startSeconds);
         int startMilliseconds = Integer.parseInt(secsAndMilsList[1]);
 
         //replace with your Implemented Class (Time)
-        Time time = new TimeClass(startHours, startHours, startHours, startHours);
+        Time time = new TimeClass(startHours, startMinutes, startSeconds, startMilliseconds);
         TimeClass tm = ((TimeClass)time);
-        System.out.println(tm.getSS());
+//        System.out.println(tm.getSS());
 //        time.setHH(startHours);
 //        time.setMM(startMinutes);
 //        time.setSS(startSeconds);
